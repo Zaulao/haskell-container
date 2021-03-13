@@ -27,7 +27,7 @@ sudo make all
 ```
 ---
 
-To achieve the best result with this container, keep your files under the `code` folder.
+To achieve the best result with this container, keep your files under the `code/` folder.
 
 # VSCode + Containers
 

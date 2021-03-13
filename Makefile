@@ -1,4 +1,4 @@
-all: run build
+all: build run
 
 build:
 	docker build -t dev-container .

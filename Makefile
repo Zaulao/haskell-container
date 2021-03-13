@@ -4,4 +4,5 @@ build:
 	docker build -t dev-container .
 
 run:
-	docker run -it dev-container bash
+	docker container rm dev-container
+	docker run --name dev-container -v $(shell pwd)/code:/root/code -it dev-container bash

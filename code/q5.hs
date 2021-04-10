@@ -6,16 +6,16 @@ app (S st) x = st x
 
 instance Functor ST where
 --fmap :: (a −> b) −> ST a −> ST b
-fmap g st = do  x <- st 
-                return (g x)
+fmap g st = do x <- st 
+               return (g x)
 
 instance Applicative ST where
 --pure :: a −> ST a
 pure x = S (\s -> (x, s))
 --(<∗>) :: ST (a −> b) −> ST a −> ST b
-stf <*> stx = do    func <- stf
-                    x <- stx
-                    return (func x)
+stf <*> stx = do func <- stf
+                 x <- stx
+                 return (func x)
 
 instance Monad ST where
 --(>>=) :: ST a −> (a −> ST b) −> ST b

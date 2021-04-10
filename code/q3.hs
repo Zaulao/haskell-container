@@ -11,5 +11,4 @@ checkArray a
     | otherwise = [a] == flatten (makeSet [a])
 
 prop_1 :: (Ord a, Num a) => Relation a -> a -> Bool
-prop_1 graph value = do response <- (checkArray (breadthFirst a v))
-    return response
+prop_1 graph value = checkArray (breadthFirst graph value)
